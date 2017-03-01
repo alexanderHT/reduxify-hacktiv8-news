@@ -1,13 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-
-
 import { search } from '../actions/index.js'
 
 const FormNew = (props) => {
   return (
-    // onSubmit={props.handleForm}
     // search yang ada di input memangil index.js yang ada di folder action
     <form>
 
@@ -17,12 +14,15 @@ const FormNew = (props) => {
 
 }
 
+
+// state to props ( get data from state and passing it to here )
 const mapStateToProps = (state) => {
   return {
     titleNews: state.search
   }
 }
 
+// ini untuk menyuruh, menjalakan
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({search}, dispatch)
 }
