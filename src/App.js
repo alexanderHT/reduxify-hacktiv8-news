@@ -41,15 +41,17 @@ class Nav extends Component {
              </div>
            </div>
 
-           <ul>
-             <li><Link to="/">news</Link></li>
-             <li><Link to="/peoples">people</Link></li>
-           </ul>
+           <div className="nav">
+             <ul>
+               <li><Link to="/">news</Link></li>
+               <li><Link to="/peoples">people</Link></li>
+             </ul>
+          </div>
 
            <hr/>
 
-           <Route path="/" component={News}/>
-            <Route path="/peoples" component={Peoples}/>
+         <Route exact path="/" component={News}/>
+           <Route path="/peoples" component={Peoples}/>
          </div>
        </Router>
     )
