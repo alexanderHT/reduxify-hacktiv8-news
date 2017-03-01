@@ -8,7 +8,9 @@ import { search } from '../actions/index.js'
 const FormNew = (props) => {
   return (
     // onSubmit={props.handleForm}
+    // search yang ada di input memangil index.js yang ada di folder action
     <form>
+
       <input type="text" onChange={(event) => { props.search(event.target.value) }} value={props.titleNews}></input>
     </form>
     )
